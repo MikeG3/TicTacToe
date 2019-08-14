@@ -34,7 +34,7 @@ var bSquareB = 0;
 var bSquareA = 0.5;
 var grayColor = 0;
 var incrementing = true;
-var soundWaves = [gridSizeY];
+var soundWaves;
 var selectedSquares = [gridSizeY];
 var hole, half, quarter, eigth;
 var tempo = 50;           //integer value used for counter to start/stop oscillator
@@ -58,14 +58,10 @@ function setup() {
     createCanvas(pWidth, pHeight);
     background( 95, 95, 95);
     frameRate(60);
-    //CONSTRUCT AND INTIALIZE SOUND WAVES FOR ALL ROWS
+    //CREATE AND SETUP POLYSYNTH
+    soundWaves = new p5.PolySynth();
+   //INITIALIZE ALL SQUARES TO FLASE, NOT SELECTED
     for (i = 0 ; i < gridSizeY ; i++) {
-        soundWaves[i] = new p5.Oscillator();
-        soundWaves[i].start();
-        soundWaves[i].setType('sine');
-        //soundWaves[i].amp(0.5);
-        soundWaves[i].freq( (i*50+350) );
-        soundWaves[i].amp(0.0);
         //INITIALIZE ALL SQUARES TO FLASE, NOT SELECTED
         selectedSquares[i] = new Array(); 
         for (j = 0 ; j < gridSizeX ; j++) {
@@ -80,11 +76,7 @@ function setup() {
 
 //DRAW LOOPS FOREVER
 function draw() {
-    /*
-         for ( i = 0 ; i < gridSizeY ; i++ ) {
-         soundWaves[i].amp(0.0);
-                 }//close if selected square 
-    */
+   
     //CHECKERED BOARD
     for (i = 0 ; i < gridSizeY ; i++ ){
       for (j = 0 ; j < gridSizeX  ; j++) { 
@@ -127,19 +119,8 @@ function draw() {
          
           
          //PLAY SOUND
-         if ( selectedSquares[i][j] ){
-             soundWaves[i].amp(0.5);
-             soundWaves[i].start();
-             //soundWaves[i].stop(noteDuration);
-         }//close if
-         //PAUSE
-          for ( k= 0 ; k < tempo ; k++ ){ k++; console.log(k);}  //DELAY SOUNDS FOR TEMPO TIME
-         //STOP SOUND
-          /*
-           if ( selectedSquares[i][j] ){
-            soundWaves[i].amp(0);
-           }//CLOSE IF
-           */
+         
+          
         }//close inner for loop
         
     }//close outter for loop
