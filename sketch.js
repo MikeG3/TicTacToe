@@ -38,7 +38,7 @@ var soundWaves;
 var selectedSquares = [gridSizeY];
 var hole, half, quarter, eigth;
 var tempo = 50;           //integer value used for counter to start/stop oscillator
-var noteDuration = 1;
+var noteDuration = 0.2;
 
 //RESPOND TO ARROW KEY INPUT (ASCII 37-40)
 window.addEventListener('keydown', move );
@@ -116,16 +116,20 @@ function draw() {
         }//close if selected position square
         //DRAW EACH RECTANGLE IN THE LOOPS
          rect(j*squareSize , i*squareSize , squareSize, squareSize); 
-         
-          
-         //PLAY SOUND
-         
           
         }//close inner for loop
         
     }//close outter for loop
 
- 
+    //PLAY SOUND
+     for (i = 0 ; i < gridSizeX ; i++ ){
+      for (j = 0 ; j < gridSizeY  ; j++) { 
+          if ( j == xPos && i == yPos ){
+            polySynth.play("G2", 0.5, 0, noteDuration);;
+        }//close if selected position square
+      }//close for j each note pitch vertically
+     }//close for i note duration horizontaly 
+    
     //UPDATE FRAME COUNT
     frameCounter++;
 }//close draw
