@@ -124,7 +124,7 @@ function draw() {
     //PLAY SOUND
      for (i = 0 ; i < gridSizeX ; i++ ){
       for (j = 0 ; j < gridSizeY  ; j++) { 
-          if ( j == xPos && i == yPos ){
+          if ( selectedSquares[j][i] ){
             soundWaves.play("G1", 0.1, 0, noteDuration);
             soundWaves.play("G2", 0.1, 1, noteDuration);
             soundWaves.play("G3", 0.1, 2, noteDuration);
