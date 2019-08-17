@@ -38,7 +38,7 @@ var soundWaves;
 var selectedSquares = [gridSizeY];
 var hole, half, quarter, eigth;
 var tempo = 50;           //integer value used for counter to start/stop oscillator
-var noteDuration = 0.2;
+var noteDuration = 1.2;
 
 //RESPOND TO ARROW KEY INPUT (ASCII 37-40)
 window.addEventListener('keydown', move );
