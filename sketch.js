@@ -125,7 +125,7 @@ function draw() {
      for (i = 0 ; i < gridSizeX ; i++ ){
       for (j = 0 ; j < gridSizeY  ; j++) { 
           if ( j == xPos && i == yPos ){
-            polySynth.play("G2", 0.5, 0, noteDuration);;
+            polySynth.play("G2", 0.5, 0, noteDuration);
         }//close if selected position square
       }//close for j each note pitch vertically
      }//close for i note duration horizontaly 
