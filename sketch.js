@@ -125,7 +125,10 @@ function draw() {
      for (i = 0 ; i < gridSizeX ; i++ ){
       for (j = 0 ; j < gridSizeY  ; j++) { 
           if ( j == xPos && i == yPos ){
-            soundWaves.play("G2", 0.1, 0, noteDuration);
+            soundWaves.play("G1", 0.1, 0, noteDuration);
+            soundWaves.play("G2", 0.1, 1, noteDuration);
+            soundWaves.play("G3", 0.1, 2, noteDuration);
+            soundWaves.play("G4", 0.1, 3, noteDuration);
         }//close if selected position square
       }//close for j each note pitch vertically
      }//close for i note duration horizontaly 
