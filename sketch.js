@@ -21,7 +21,7 @@ var j = 0;
 var k = 0;
 var xPos = 0;
 var yPos = 0;
-var gridSizeX = 16;
+var gridSizeX = 32;
 var gridSizeY = 28;
 var squareSize = 15;
 var aSquareR = 0;
@@ -125,7 +125,7 @@ function draw() {
      for (i = 0 ; i < gridSizeX ; i++ ){
       for (j = 0 ; j < gridSizeY  ; j++) { 
           if ( j == xPos && i == yPos ){
-            soundWaves.play("G2", 0.5, 0, noteDuration);
+            soundWaves.play("G2", 0.1, 0, noteDuration);
         }//close if selected position square
       }//close for j each note pitch vertically
      }//close for i note duration horizontaly 
