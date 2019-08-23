@@ -78,7 +78,7 @@ function setup() {
     hole.setRange(1, 0);
     //TEST SOUND
     for ( i = 0 ; i < minorScale.length ; i++ ) {
-        soundWaves.play("G1", 0.1, delay, noteDuration);
+        soundWaves.play( minorScale[i], 0.1, delay, noteDuration);
         delay+=noteDuration;
     }//close for each note in minor scale
     /*
