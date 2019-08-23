@@ -72,6 +72,11 @@ function setup() {
     hole = new p5.Env();
     hole.setADSR(0.5, 0.5, 0.5, 0.5)
     hole.setRange(1, 0);
+    //TEST SOUND
+    soundWaves.play("G1", 0.1, 0, noteDuration);
+    soundWaves.play("G2", 0.1, 1, noteDuration);
+    soundWaves.play("G3", 0.1, 2, noteDuration);
+    soundWaves.play("G4", 0.1, 3, noteDuration);
 }//close setup
 
 //DRAW LOOPS FOREVER
@@ -122,6 +127,7 @@ function draw() {
     }//close outter for loop
 
     //PLAY SOUND
+    /*
      for (i = 0 ; i < gridSizeX ; i++ ){
       for (j = 0 ; j < gridSizeY  ; j++) { 
           if ( selectedSquares[j][i] ){
@@ -132,6 +138,7 @@ function draw() {
         }//close if selected position square
       }//close for j each note pitch vertically
      }//close for i note duration horizontaly 
+     */
     
     //UPDATE FRAME COUNT
     frameCounter++;
