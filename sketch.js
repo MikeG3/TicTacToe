@@ -81,6 +81,17 @@ function setup() {
     soundWaves.play("G5", 0.1, 0, 15);
     soundWaves.play("G6", 0.1, 0, 18);
     */
+    //A SCALE
+    var delay = 0;
+    soundWaves.play("A2", 0.1, delay, 1.5);
+    soundWaves.play("B2", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("C#2", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("D2", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("E2", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("F#2", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("G#2", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("A3", 0.1, delay += 1.5, 1.5);
+    
 }//close setup
 
 //DRAW LOOPS FOREVER
