@@ -115,7 +115,7 @@ function draw() {
         //COLOR SELECTED SQUARES 
         if ( selectedSquares[i][j] ){
             fill(25, 255, 75);
-            //play sounds
+            //PLAY SOUNDS
             soundWaves.play("G2", 0.1, 0, 2);
             soundWaves.play("G3", 0.1, 0, 4);
             soundWaves.play("G4", 0.1, 0, 6);
