@@ -133,10 +133,10 @@ function draw() {
         if ( selectedSquares[i][j] ){
             fill(25, 255, 75);
             //PLAY SOUNDS
-            soundWaves.play("G2", 0.1, 0, 2);
-            soundWaves.play("G3", 0.1, 0, 4);
-            soundWaves.play("G4", 0.1, 0, 6);
-            soundWaves.play("G5", 0.1, 0, 8);
+            soundWaves.play("G#2", 0.1, 0, 2);
+            soundWaves.play("G#3", 0.1, 0, 4);
+            soundWaves.play("G#4", 0.1, 0, 6);
+            soundWaves.play("G#5", 0.1, 0, 8);
         }//close if selected position squares
         //COLOR SELECTED SQUARE
         if ( j == xPos && i == yPos ){
