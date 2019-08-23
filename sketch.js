@@ -40,7 +40,7 @@ var hole, half, quarter, eigth;
 var tempo = 50;           //integer value used for counter to start/stop oscillator
 var noteDuration = 1.5;
 var delay = 0;
-var startNote = 45     //A4
+var startNote = 57     //A4
 var majorScale = [ startNote, startNote+=2,  startNote+=2,  startNote+=1,  startNote+=2,  startNote+=2,  startNote+=2,  startNote+=1 ];
 var minorScale = [  startNote,  startNote+=2,  startNote+=1,  startNote+=2,  startNote+=2,  startNote+=1,  startNote+=2,  startNote+=2 ];
 
