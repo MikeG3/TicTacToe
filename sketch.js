@@ -41,7 +41,8 @@ var tempo = 50;           //integer value used for counter to start/stop oscilla
 var noteDuration = 1.2;
 var delay = 0;
 var startNote = 33     //A4
-var aMajor = [ 33, 35, 37, 38, 40, 42, 44, 45 ];
+var majorScale = [ startNote, startNote+=2,  startNote+=2,  startNote+=1,  startNote+=2,  startNote+=2,  startNote+=2,  startNote+=1 ];
+var minorScale = [  startNote,  startNote+=2,  startNote+=1,  startNote+=2,  startNote+=2,  startNote+=1,  startNote+=2,  startNote+=2 ];
 
 //RESPOND TO ARROW KEY INPUT (ASCII 37-40)
 window.addEventListener('keydown', move );
