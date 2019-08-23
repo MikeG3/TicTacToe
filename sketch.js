@@ -80,7 +80,6 @@ function setup() {
     soundWaves.play("G4", 0.1, 0, 12);
     soundWaves.play("G5", 0.1, 0, 15);
     soundWaves.play("G6", 0.1, 0, 18);
-    */
     //A MAJOR SCALE
     var delay = 0;
     soundWaves.play("A2", 0.1, delay, 1.5);
@@ -90,6 +89,7 @@ function setup() {
     soundWaves.play("E2", 0.1, delay += 1.5, 1.5);
     soundWaves.play("F#2", 0.1, delay += 1.5, 1.5);
     soundWaves.play("G#2", 0.1, delay += 1.5, 1.5);
+    */
     soundWaves.play("A3", 0.1, delay += 1.5, 1.5);
     soundWaves.play("B3", 0.1, delay += 1.5, 1.5);
     soundWaves.play("C#3", 0.1, delay += 1.5, 1.5);
@@ -98,6 +98,20 @@ function setup() {
     soundWaves.play("F#3", 0.1, delay += 1.5, 1.5);
     soundWaves.play("G#3", 0.1, delay += 1.5, 1.5);
     soundWaves.play("A4", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("B4", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("C#4", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("D4", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("E4", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("F#4", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("G#4", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("A5", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("B5", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("C#5", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("D5", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("E5", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("F#5", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("G#5", 0.1, delay += 1.5, 1.5);
+    soundWaves.play("A6", 0.1, delay += 1.5, 1.5);
 }//close setup
 
 //DRAW LOOPS FOREVER
