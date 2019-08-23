@@ -40,11 +40,15 @@ var hole, half, quarter, eigth;
 var tempo = 50;           //integer value used for counter to start/stop oscillator
 var noteDuration = 1.5;
 var delay = 0;
-var startNote = 57, note;     //A4
+var startNote = 69, note;     //A4
 note = startNote;
-var majorScale = [ note, note+=2,  note+=2,  note+=1,  note+=2,  note+=2,  note+=2,  note+=1 ];
+var majorScale = [ note, note+=2,  note+=2,  note+=1,  note+=2,  note+=2,  note+=2,  note+=1,
+                 note+=2,  note+=2,  note+=1,  note+=2,  note+=2,  note+=2,  note+=1 ,
+                 note+=2,  note+=2,  note+=1,  note+=2,  note+=2,  note+=2,  note+=1 ];
 note = startNote;
-var minorScale = [  note,  note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2 ];
+var minorScale = [  note,  note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2,
+                  note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2,
+                  note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2 ];
 
 //RESPOND TO ARROW KEY INPUT (ASCII 37-40)
 window.addEventListener('keydown', move );
