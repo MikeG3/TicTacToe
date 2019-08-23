@@ -42,9 +42,9 @@ var noteDuration = 1.5;
 var delay = 0;
 var startNote = 57, note;     //A4
 note = startNote;
-var majorScale = [ startNote, startNote+=2,  startNote+=2,  startNote+=1,  startNote+=2,  startNote+=2,  startNote+=2,  startNote+=1 ];
+var majorScale = [ note, note+=2,  note+=2,  note+=1,  note+=2,  note+=2,  note+=2,  note+=1 ];
 note = startNote;
-var minorScale = [  startNote,  startNote+=2,  startNote+=1,  startNote+=2,  startNote+=2,  startNote+=1,  startNote+=2,  startNote+=2 ];
+var minorScale = [  note,  note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2 ];
 
 //RESPOND TO ARROW KEY INPUT (ASCII 37-40)
 window.addEventListener('keydown', move );
