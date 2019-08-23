@@ -39,6 +39,9 @@ var selectedSquares = [gridSizeY];
 var hole, half, quarter, eigth;
 var tempo = 50;           //integer value used for counter to start/stop oscillator
 var noteDuration = 1.2;
+var delay = 0;
+var startNote = 33     //A4
+var aMajor = [ 33, 35, 37, 38, 40, 42, 44, 45 ];
 
 //RESPOND TO ARROW KEY INPUT (ASCII 37-40)
 window.addEventListener('keydown', move );
@@ -89,7 +92,6 @@ function setup() {
     soundWaves.play("E2", 0.1, delay += 1.5, 1.5);
     soundWaves.play("F#2", 0.1, delay += 1.5, 1.5);
     soundWaves.play("G#2", 0.1, delay += 1.5, 1.5);
-    */
     soundWaves.play("A3", 0.1, delay += 1.5, 1.5);
     soundWaves.play("B3", 0.1, delay += 1.5, 1.5);
     soundWaves.play("C#3", 0.1, delay += 1.5, 1.5);
@@ -112,6 +114,7 @@ function setup() {
     soundWaves.play("F#5", 0.1, delay += 1.5, 1.5);
     soundWaves.play("G#5", 0.1, delay += 1.5, 1.5);
     soundWaves.play("A6", 0.1, delay += 1.5, 1.5);
+    */
 }//close setup
 
 //DRAW LOOPS FOREVER
