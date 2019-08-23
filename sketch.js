@@ -77,7 +77,10 @@ function setup() {
     hole.setADSR(0.5, 0.5, 0.5, 0.5)
     hole.setRange(1, 0);
     //TEST SOUND
-    var delay = 0;
+    for ( i = 0 ; i < minorScale.length ; i++ ) {
+        soundWaves.play("G1", 0.1, delay, noteDuration);
+        delay+=noteDuration;
+    }//close for each note in minor scale
     /*
     soundWaves.play("G1", 0.1, 0, 3);
     soundWaves.play("G2", 0.1, 0, 6);
