@@ -77,6 +77,8 @@ function setup() {
     soundWaves.play("G2", 0.1, 0, 6
     soundWaves.play("G3", 0.1, 0, 9);
     soundWaves.play("G4", 0.1, 0, 12);
+    soundWaves.play("G5", 0.1, 0, 15);
+    soundWaves.play("G6", 0.1, 0, 18);
 }//close setup
 
 //DRAW LOOPS FOREVER
