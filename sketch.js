@@ -73,10 +73,10 @@ function setup() {
     hole.setADSR(0.5, 0.5, 0.5, 0.5)
     hole.setRange(1, 0);
     //TEST SOUND
-    soundWaves.play("G1", 0.1, 0, noteDuration);
-    soundWaves.play("G2", 0.1, 1, noteDuration);
-    soundWaves.play("G3", 0.1, 2, noteDuration);
-    soundWaves.play("G4", 0.1, 3, noteDuration);
+    soundWaves.play("G1", 0.1, 0, 1);
+    soundWaves.play("G2", 0.1, 1, 2);
+    soundWaves.play("G3", 0.1, 2, 3);
+    soundWaves.play("G4", 0.1, 3, 4);
 }//close setup
 
 //DRAW LOOPS FOREVER
