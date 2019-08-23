@@ -73,12 +73,14 @@ function setup() {
     hole.setADSR(0.5, 0.5, 0.5, 0.5)
     hole.setRange(1, 0);
     //TEST SOUND
+    /*
     soundWaves.play("G1", 0.1, 0, 3);
     soundWaves.play("G2", 0.1, 0, 6);
     soundWaves.play("G3", 0.1, 0, 9);
     soundWaves.play("G4", 0.1, 0, 12);
     soundWaves.play("G5", 0.1, 0, 15);
     soundWaves.play("G6", 0.1, 0, 18);
+    */
 }//close setup
 
 //DRAW LOOPS FOREVER
@@ -113,6 +115,11 @@ function draw() {
         //COLOR SELECTED SQUARES 
         if ( selectedSquares[i][j] ){
             fill(25, 255, 75);
+            //play sounds
+            soundWaves.play("G2", 0.1, 0, 2);
+            soundWaves.play("G3", 0.1, 0, 4);
+            soundWaves.play("G4", 0.1, 0, 6);
+            soundWaves.play("G5", 0.1, 0, 8);
         }//close if selected position squares
         //COLOR SELECTED SQUARE
         if ( j == xPos && i == yPos ){
