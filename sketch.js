@@ -73,6 +73,7 @@ function setup() {
     hole.setADSR(0.5, 0.5, 0.5, 0.5)
     hole.setRange(1, 0);
     //TEST SOUND
+    var delay = 0;
     /*
     soundWaves.play("G1", 0.1, 0, 3);
     soundWaves.play("G2", 0.1, 0, 6);
@@ -81,7 +82,6 @@ function setup() {
     soundWaves.play("G5", 0.1, 0, 15);
     soundWaves.play("G6", 0.1, 0, 18);
     //A MAJOR SCALE
-    var delay = 0;
     soundWaves.play("A2", 0.1, delay, 1.5);
     soundWaves.play("B2", 0.1, delay += 1.5, 1.5);
     soundWaves.play("C#2", 0.1, delay += 1.5, 1.5);
