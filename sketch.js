@@ -65,7 +65,7 @@ for ( i = 0 ; i < 7 ; i++){
       majorScales.push(notes[(j+(i*7))]);
       //j INCREMENTS BY 1 TWICE, ALL OTHER TIMES BY 2
       if (j != 3 && j != 7) {
-         j++
+         j++;
       }//close if not the 4th, nor 8th note
    }//close for j each note in the scale
 }//close for i each octave
