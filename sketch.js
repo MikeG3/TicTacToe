@@ -42,7 +42,7 @@ var noteDuration = 1.5;
 var delay = 0;
 var startNote = 36;      //A4
 var note = startNote;
-
+/*
 var notes = [  //7 octaves    KEY = NOTE+(12*(OCTAVE-1))                     
   //A:0 A#:1  B:2 C:3 C#:4  D:5 D#:6 E:7 F:8 F#:9 G:10  G#11        INDEX = NOTE+(12*(OCTAVE-1))
   55, 58.27, 61.74, 65.41, 69.3, 73.42, 77.78, 82.41, 87.31, 92.5, 98, 103.83,                            //A1 - G#1
@@ -54,6 +54,7 @@ var notes = [  //7 octaves    KEY = NOTE+(12*(OCTAVE-1))
   3520, 3729.31, 3951.07, 4186.01, 4434.92, 4698.63, 4978.03, 5274.04, 5587.65, 5919.91, 6271.93, 6644.88,   //A7 - G#7
   7040, 7458.62, 7902.13
   ];
+  */
 //var majorScales[7];
 /*
 for ( i = 0 ; i < 7 ; i++){
