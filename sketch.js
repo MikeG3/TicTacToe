@@ -56,12 +56,21 @@ var notes = [
   7040, 7458.62, 7902.13 ];
   
 var majorScales = [7];     //7 OCTAVES
-/*
+note = 0;
+//FOR EACH OCTAVE
 for ( i = 0 ; i < 7 ; i++){
-  
+  //FOR EACH NOTE OF THE OCTAVE/SCALE
+   for ( j = 0 ; j < 12 ; j++){
+      //ROOT NOTE IS 0
+      majorScales.push(notes[(j+(i*7))]);
+      //j INCREMENTS BY 1 TWICE, ALL OTHER TIMES BY 2
+      if (j != 3 && j != 7) {
+         j++
+      }//close if not the 4th, nor 8th note
+   }//close for j each note in the scale
 }//close for i each octave
 note = 0;
-*/
+
 /*
 REPLACE BELOW WITH FOR LOOP, 
 */
