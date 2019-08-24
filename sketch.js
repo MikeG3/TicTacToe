@@ -59,6 +59,7 @@ for ( i = 0 ; i < 7 ; i++){
   
 }//close for i each octave
 note = 0;
+*/
 /*
 REPLACE BELOW WITH FOR LOOP, 
 */
