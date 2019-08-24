@@ -42,6 +42,7 @@ var noteDuration = 1.5;
 var delay = 0;
 var startNote = 36;      //A4
 var note = startNote;
+/*
 var notes = [  //7 octaves    KEY = NOTE+(12*(OCTAVE-1))                     
   //A:0 A#:1  B:2 C:3 C#:4  D:5 D#:6 E:7 F:8 F#:9 G:10  G#11        INDEX = NOTE+(12*(OCTAVE-1))
   55, 58.27, 61.74, 65.41, 69.3, 73.42, 77.78, 82.41, 87.31, 92.5, 98, 103.83,                            //A1 - G#1
@@ -54,6 +55,9 @@ var notes = [  //7 octaves    KEY = NOTE+(12*(OCTAVE-1))
   7040, 7458.62, 7902.13
   ];
 //var majorScales[7];
+for ( i = 0 ; i < 7 ; i++){
+  
+}//close for i each octave
 note = 0;
 /*
 REPLACE BELOW WITH FOR LOOP, 
@@ -61,8 +65,9 @@ REPLACE BELOW WITH FOR LOOP,
 var majorScale = [ notes[note], notes[note+=2],  notes[note+=2],  notes[note+=1],  notes[note+=2],  notes[note+=2],  notes[note+=2],  notes[note+=1],
                  notes[note+=2],  notes[note+=2],  notes[note+=1],  notes[note+=2],  notes[note+=2],  notes[note+=2],  notes[note+=1],
                  notes[note+=2],  notes[note+=2],  notes[note+=1],  notes[note+=2],  notes[note+=2],  notes[note+=2],  notes[note+=1] ];
+*/
 note = 0;
-var minorScale = [  notes[note],  note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2,
+var minorScale = [  note,  note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2,
                   note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2,
                   note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2 ];
 
