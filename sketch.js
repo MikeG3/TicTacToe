@@ -40,9 +40,10 @@ var hole, half, quarter, eigth;
 var tempo = 50;           //integer value used for counter to start/stop oscillator
 var noteDuration = 1.5;
 var delay = 0;
-var startNote = 286, note;     //A4
-note = startNote;
-var notes = [
+var startNote = 1+(12*3)      //A4
+var note = startNote;
+var notes = [  //KEY = NOTE+(12*(OCTAVE-1))                     
+  //A:0 A#:1  B:2 C:3 C#:4  D:5 D#:6 E:7 F:8 F#:9 G:10  G#11        INDEX = NOTE+(12*(OCTAVE-1))
   55, 58.27, 61.74, 65.41, 69.3, 73.42, 77.78, 82.41, 87.31, 92.5, 98, 103.83,                            //A1 - G#1
   110, 116.54, 123.47, 130.81, 138.59, 146.83, 155.56, 164.81, 174.61, 185, 196, 207.65, 
   220, 233.08, 246.94, 261.63, 277.18, 293.66, 311.13, 329.63, 349.23, 369.99. 392, 415.3,
@@ -52,11 +53,16 @@ var notes = [
   3520, 3729.31, 3951.07, 4186.01, 4434.92, 4698.63, 4978.03, 5274.04, 5587.65, 5919.91, 6271.93, 6644.88,   //A7 - G#7
   7040, 7458.62, 7902.13
   ];
-var majorScale = [ note, note+=2,  note+=2,  note+=1,  note+=2,  note+=2,  note+=2,  note+=1,
-                 note+=2,  note+=2,  note+=1,  note+=2,  note+=2,  note+=2,  note+=1 ,
-                 note+=2,  note+=2,  note+=1,  note+=2,  note+=2,  note+=2,  note+=1 ];
-note = startNote;
-var minorScale = [  note,  note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2,
+var majorScales[7];
+note = 0;
+/*
+REPLACE BELOW WITH FOR LOOP, 
+*/
+var majorScale = [ notes[note], notes[note+=2],  notes[note+=2],  notes[note+=1],  notes[note+=2],  notes[note+=2],  notes[note+=2],  notes[note+=1],
+                 notes[note+=2],  notes[note+=2],  notes[note+=1],  notes[note+=2],  notes[note+=2],  notes[note+=2],  notes[note+=1],
+                 notes[note+=2],  notes[note+=2],  notes[note+=1],  notes[note+=2],  notes[note+=2],  notes[note+=2],  notes[note+=1] ];
+note = 0;
+var minorScale = [  notes[note,  note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2,
                   note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2,
                   note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2 ];
 
