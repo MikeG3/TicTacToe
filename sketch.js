@@ -62,7 +62,7 @@ for ( i = 0 ; i < 7 ; i++){
   //FOR EACH NOTE OF THE OCTAVE/SCALE
    for ( j = 0 ; j < 12 ; j++){
       //ROOT NOTE IS 0
-      majorScales.push(notes[(j+(i*7))]);
+      majorScales.push(notes[(j+(i*12))]);
       //j INCREMENTS BY 1 TWICE, ALL OTHER TIMES BY 2
       if (j != 3 && j != 7) {
          j++;
