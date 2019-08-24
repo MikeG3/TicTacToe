@@ -62,6 +62,7 @@ note = 0;
 /*
 REPLACE BELOW WITH FOR LOOP, 
 */
+/*
 var majorScale = [ notes[note], notes[note+=2],  notes[note+=2],  notes[note+=1],  notes[note+=2],  notes[note+=2],  notes[note+=2],  notes[note+=1],
                  notes[note+=2],  notes[note+=2],  notes[note+=1],  notes[note+=2],  notes[note+=2],  notes[note+=2],  notes[note+=1],
                  notes[note+=2],  notes[note+=2],  notes[note+=1],  notes[note+=2],  notes[note+=2],  notes[note+=2],  notes[note+=1] ];
