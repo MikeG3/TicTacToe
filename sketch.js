@@ -53,7 +53,7 @@ var notes = [  //7 octaves    KEY = NOTE+(12*(OCTAVE-1))
   3520, 3729.31, 3951.07, 4186.01, 4434.92, 4698.63, 4978.03, 5274.04, 5587.65, 5919.91, 6271.93, 6644.88,   //A7 - G#7
   7040, 7458.62, 7902.13
   ];
-var majorScales[7];
+//var majorScales[7];
 note = 0;
 /*
 REPLACE BELOW WITH FOR LOOP, 
