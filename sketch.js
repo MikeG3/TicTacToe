@@ -40,7 +40,7 @@ var hole, half, quarter, eigth;
 var tempo = 50;           //integer value used for counter to start/stop oscillator
 var noteDuration = 1.5;
 var delay = 0;
-var startNote = 1+(12*3);      //A4
+var startNote = 36;      //A4
 var note = startNote;
 var notes = [  //7 octaves    KEY = NOTE+(12*(OCTAVE-1))                     
   //A:0 A#:1  B:2 C:3 C#:4  D:5 D#:6 E:7 F:8 F#:9 G:10  G#11        INDEX = NOTE+(12*(OCTAVE-1))
