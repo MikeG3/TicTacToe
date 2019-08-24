@@ -62,7 +62,7 @@ var majorScale = [ notes[note], notes[note+=2],  notes[note+=2],  notes[note+=1]
                  notes[note+=2],  notes[note+=2],  notes[note+=1],  notes[note+=2],  notes[note+=2],  notes[note+=2],  notes[note+=1],
                  notes[note+=2],  notes[note+=2],  notes[note+=1],  notes[note+=2],  notes[note+=2],  notes[note+=2],  notes[note+=1] ];
 note = 0;
-var minorScale = [  notes[note,  note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2,
+var minorScale = [  notes[note],  note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2,
                   note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2,
                   note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2 ];
 
