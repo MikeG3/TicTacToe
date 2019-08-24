@@ -110,10 +110,12 @@ function setup() {
         soundWaves.play( minorScale[i], 0.1, delay, noteDuration);
         delay+=noteDuration;
     }//close for each note in minor scale
+  /*
         for ( i = 0 ; i < majorScale.length ; i++ ) {
         soundWaves.play( majorScale[i], 0.1, delay, noteDuration);
         delay+=noteDuration;
     }//close for each note in minor scale
+    */
     /*
     soundWaves.play("G1", 0.1, 0, 3);
     soundWaves.play("G2", 0.1, 0, 6);
