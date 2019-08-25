@@ -57,7 +57,6 @@ var notes = [
   7040, 7458.62, 7902.13 ];
   
 //SCALES 
-
 var majorScales = [42];     //6 OCTAVES * 7 NOTES = 42
 note = 0;
 //FOR EACH OCTAVE
