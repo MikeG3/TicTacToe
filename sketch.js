@@ -55,7 +55,7 @@ var notes = [
   3520, 3729.31, 3951.07, 4186.01, 4434.92, 4698.63, 4978.03, 5274.04, 5587.65, 5919.91, 6271.93, 6644.88,   
   7040, 7458.62, 7902.13 ];
   
-var majorScales = [7];     //7 OCTAVES
+var majorScales = [6*7];     //6 OCTAVES
 note = 0;
 //FOR EACH OCTAVE
 for ( i = 0 ; i < 7 ; i++){
@@ -71,6 +71,7 @@ for ( i = 0 ; i < 7 ; i++){
 }//close for i each octave
 note = 0;
 
+
 /*
 REPLACE BELOW WITH FOR LOOP, 
 */
@@ -78,11 +79,10 @@ REPLACE BELOW WITH FOR LOOP,
 var majorScale = [ notes[note], notes[note+=2],  notes[note+=2],  notes[note+=1],  notes[note+=2],  notes[note+=2],  notes[note+=2],  notes[note+=1],
                  notes[note+=2],  notes[note+=2],  notes[note+=1],  notes[note+=2],  notes[note+=2],  notes[note+=2],  notes[note+=1],
                  notes[note+=2],  notes[note+=2],  notes[note+=1],  notes[note+=2],  notes[note+=2],  notes[note+=2],  notes[note+=1] ];
-*/
-note = 0;
 var minorScale = [  note,  note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2,
                   note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2,
                   note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2 ];
+*/
 
 //RESPOND TO ARROW KEY INPUT (ASCII 37-40)
 window.addEventListener('keydown', move );
