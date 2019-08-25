@@ -55,6 +55,7 @@ var notes = [
   3520, 3729.31, 3951.07, 4186.01, 4434.92, 4698.63, 4978.03, 5274.04, 5587.65, 5919.91, 6271.93, 6644.88,   
   7040, 7458.62, 7902.13 ];
 //SCALES 
+/*
 var majorScales = [42];     //6 OCTAVES * 7 NOTES = 42
 note = 0;
 //FOR EACH OCTAVE
@@ -69,6 +70,7 @@ for ( i = 0 ; i < 7 ; i++){
       }//close if not the 4th, nor 8th note
    }//close for j each note in the scale
 }//close for i each octave
+*/
 /*
 var minorScales = [42];     //6 OCTAVES
 note = 0;
