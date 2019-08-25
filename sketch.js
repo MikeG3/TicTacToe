@@ -107,6 +107,7 @@ function setup() {
     frameRate(60);
     //CREATE AND SETUP POLYSYNTH
     soundWaves = new p5.PolySynth();
+   soundWaves.setADSR(0.5, 0.5, 0.5, 0.5);
    //INITIALIZE ALL SQUARES TO FLASE, NOT SELECTED
     for (i = 0 ; i < gridSizeY ; i++) {
         //INITIALIZE ALL SQUARES TO FLASE, NOT SELECTED
