@@ -69,7 +69,7 @@ for ( i = 0 ; i < 7 ; i++){
       }//close if not the 4th, nor 8th note
    }//close for j each note in the scale
 }//close for i each octave
-
+/*
 var minorScales = [42];     //6 OCTAVES
 note = 0;
 //FOR EACH OCTAVE
@@ -84,7 +84,7 @@ for ( i = 0 ; i < 7 ; i++){
       }//close if not the 4th, nor 8th note
    }//close for j each note in the scale
 }//close for i each octave
-note = 0;
+*/
 
 
 
