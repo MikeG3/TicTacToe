@@ -129,6 +129,10 @@ function setup() {
    for ( i = 0 ; i < majorScales.length ; i++ ){
        soundWaves.play( majorScales[i], 0.1, delay+=noteDuration, noteDuration);
    }//close for i each note in scale
+   delay = 0;
+   for ( i = 0 ; i < minorScales.length ; i++ ){
+       soundWaves.play( minorScales[i], 0.1, delay+=noteDuration, noteDuration);
+   }//close for i each note in scale
 
 }//close setup
 
