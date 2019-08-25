@@ -122,11 +122,12 @@ function setup() {
     hole.setRange(1, 0);
     //TEST SOUND
    delay = 0;
+   /*
    for ( i = 14 ; i < minorScales.length ; i++){
        soundWaves.play(notes[i], 0.1, delay, noteDuration);
       delay += noteDuration;
    }//cloplay each note in scale for i
-
+*/
 
 }//close setup
 
