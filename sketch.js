@@ -135,11 +135,13 @@ function setup() {
     hole.setADSR(0.5, 0.5, 0.5, 0.5)
     hole.setRange(1, 0);
     //TEST SOUND
+   
+   /*
     for ( i = 0 ; i < minorScale.length ; i++ ) {
         soundWaves.play( minorScale[i], 0.1, delay, noteDuration);
         delay+=noteDuration;
     }//close for each note in minor scale
-  /*
+  
         for ( i = 0 ; i < majorScale.length ; i++ ) {
         soundWaves.play( majorScale[i], 0.1, delay, noteDuration);
         delay+=noteDuration;
