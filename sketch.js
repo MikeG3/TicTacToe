@@ -54,7 +54,7 @@ var notes = [
   1760, 1864.66, 1975.53, 2093, 2217.46, 2349.32, 2489.02, 2637.02, 2793.83, 2959.96, 3135.96, 3322.44, 
   3520, 3729.31, 3951.07, 4186.01, 4434.92, 4698.63, 4978.03, 5274.04, 5587.65, 5919.91, 6271.93, 6644.88,   
   7040, 7458.62, 7902.13 ];
-  
+//SCALES 
 var majorScales = [6*7];     //6 OCTAVES
 note = 0;
 //FOR EACH OCTAVE
@@ -64,7 +64,22 @@ for ( i = 0 ; i < 7 ; i++){
       //ROOT NOTE IS 0
       majorScales.push(notes[(j+(i*12))]);
       //j INCREMENTS BY 1 TWICE, ALL OTHER TIMES BY 2
-      if (j != 3 && j != 7) {
+      if (j != 2 && j != 6) {
+         j++;
+      }//close if not the 4th, nor 8th note
+   }//close for j each note in the scale
+}//close for i each octave
+note = 0;
+var minorScales = [6*7];     //6 OCTAVES
+note = 0;
+//FOR EACH OCTAVE
+for ( i = 0 ; i < 7 ; i++){
+  //FOR EACH NOTE OF THE OCTAVE/SCALE
+   for ( j = 0 ; j < 12 ; j++){
+      //ROOT NOTE IS 0
+      minorScales.push(notes[(j+(i*12))]);
+      //j INCREMENTS BY 1 TWICE, ALL OTHER TIMES BY 2
+      if (j != 1 && j != 4) {
          j++;
       }//close if not the 4th, nor 8th note
    }//close for j each note in the scale
