@@ -38,7 +38,7 @@ var soundWaves;
 var selectedSquares = [gridSizeY];
 var hole, half, quarter, eigth;
 var tempo = 50;           //integer value used for counter to start/stop oscillator
-var noteDuration = 1.5;
+var noteDuration = 0.5;
 var delay = 0;
 var startNote = 36;      //A4
 var note = startNote;
