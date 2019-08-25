@@ -123,7 +123,11 @@ function setup() {
     //TEST SOUND
    delay = 0;
    for ( i = 0 ; i < 43 ; i++ ){
-       soundWaves.play( notes[i], 0.1, delay+=noteDuration, noteduration);
+       soundWaves.play( notes[i], 0.1, delay+=noteDuration, noteDuration);
+   }//close for i each note in scale
+      delay = 0;
+   for ( i = 0 ; i < 43 ; i++ ){
+       soundWaves.play( notes[i], 0.1, delay+=noteDuration, noteDuration);
    }//close for i each note in scale
 
 }//close setup
