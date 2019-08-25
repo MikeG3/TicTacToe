@@ -45,7 +45,7 @@ var note = startNote;
 
 //7 octaves    KEY = NOTE+(12*(OCTAVE-1))  //A:0 A#:1  B:2 C:3 C#:4  D:5 D#:6 E:7 F:8 F#:9 G:10  G#11        INDEX = NOTE+(12*(OCTAVE-1))
    //A0 - G#0     -->   A6 - G#6
-/*
+
 var notes = [                     
   55, 58.27, 61.74, 65.41, 69.3, 73.42, 77.78, 82.41, 87.31, 92.5, 98, 103.83,                         
   110, 116.54, 123.47, 130.81, 138.59, 146.83, 155.56, 164.81, 174.61, 185, 196, 207.65, 
@@ -57,7 +57,7 @@ var notes = [
   7040, 7458.62, 7902.13 ];
   */
 //SCALES 
-/*
+
 var majorScales = [42];     //6 OCTAVES * 7 NOTES = 42
 note = 0;
 //FOR EACH OCTAVE
@@ -96,10 +96,11 @@ for ( i = 0 ; i < 7 ; i++){
 var majorScale = [ notes[note], notes[note+=2],  notes[note+=2],  notes[note+=1],  notes[note+=2],  notes[note+=2],  notes[note+=2],  notes[note+=1],
                  notes[note+=2],  notes[note+=2],  notes[note+=1],  notes[note+=2],  notes[note+=2],  notes[note+=2],  notes[note+=1],
                  notes[note+=2],  notes[note+=2],  notes[note+=1],  notes[note+=2],  notes[note+=2],  notes[note+=2],  notes[note+=1] ];
+*/
 var minorScale = [  note,  note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2,
                   note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2,
                   note+=2,  note+=1,  note+=2,  note+=2,  note+=1,  note+=2,  note+=2 ];
-*/
+
 
 //RESPOND TO ARROW KEY INPUT (ASCII 37-40)
 window.addEventListener('keydown', move );
