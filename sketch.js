@@ -87,7 +87,6 @@ for ( i = 0 ; i < 7 ; i++){
    }//close for j each note in the scale
 }//close for i each octave
 
-
 //RESPOND TO ARROW KEY INPUT (ASCII 37-40)
 window.addEventListener('keydown', move );
 
@@ -121,7 +120,9 @@ function setup() {
     hole.setADSR(0.5, 0.5, 0.5, 0.5)
     hole.setRange(1, 0);
     //TEST SOUND
-   
+   for ( i = 0 ; i < minorScales.length ; i++){
+       soundWaves.play(notes[i], 0.1, 0, noteDuration);
+   }//cloplay each note in scale for i
 
 
 }//close setup
