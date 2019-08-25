@@ -31,7 +31,7 @@ var aSquareA = 0.5;
 var bSquareR = 0;
 var bSquareG = 0;
 var bSquareB = 0;
-var bSquareA = 0.5;
+var bSquareA = 1.1;
 var grayColor = 0;
 var incrementing = true;
 var soundWaves;
