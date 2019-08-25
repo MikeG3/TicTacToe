@@ -123,55 +123,8 @@ function setup() {
     hole.setRange(1, 0);
     //TEST SOUND
    
-   /*
-    for ( i = 0 ; i < minorScale.length ; i++ ) {
-        soundWaves.play( minorScale[i], 0.1, delay, noteDuration);
-        delay+=noteDuration;
-    }//close for each note in minor scale
-  
-        for ( i = 0 ; i < majorScale.length ; i++ ) {
-        soundWaves.play( majorScale[i], 0.1, delay, noteDuration);
-        delay+=noteDuration;
-    }//close for each note in minor scale
-    */
-    /*
-    soundWaves.play("G1", 0.1, 0, 3);
-    soundWaves.play("G2", 0.1, 0, 6);
-    soundWaves.play("G3", 0.1, 0, 9);
-    soundWaves.play("G4", 0.1, 0, 12);
-    soundWaves.play("G5", 0.1, 0, 15);
-    soundWaves.play("G6", 0.1, 0, 18);
-    //A MAJOR SCALE
-    soundWaves.play("A2", 0.1, delay, 1.5);
-    soundWaves.play("B2", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("C#2", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("D2", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("E2", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("F#2", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("G#2", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("A3", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("B3", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("C#3", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("D3", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("E3", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("F#3", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("G#3", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("A4", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("B4", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("C#4", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("D4", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("E4", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("F#4", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("G#4", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("A5", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("B5", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("C#5", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("D5", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("E5", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("F#5", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("G#5", 0.1, delay += 1.5, 1.5);
-    soundWaves.play("A6", 0.1, delay += 1.5, 1.5);
-    */
+
+
 }//close setup
 
 //DRAW LOOPS FOREVER
