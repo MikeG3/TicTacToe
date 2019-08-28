@@ -129,6 +129,7 @@ function setup() {
     hole.setRange(1, 0);
     //TEST SOUND
    delay = 0;
+   /*
    for ( i = 0 ; i < myNotes.length ; i++ ){
        soundWaves.play( myNotes[i], 0.1, delay+=noteDuration, noteDuration);
    }//close for i each note in scale
@@ -143,7 +144,7 @@ function setup() {
        soundWaves.play( notes[i], 0.1, delay+=noteDuration, noteDuration);
    }//close for i each note in scale
    //delay = 0;
-
+*/
 }//close setup
 
 //DRAW LOOPS FOREVER
