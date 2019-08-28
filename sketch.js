@@ -180,11 +180,11 @@ function draw() {
         if ( selectedSquares[i][j] ){
             fill(25, 255, 75);
             //PLAY SOUNDS BASED ON SELECTED SQUARE    i --> NOTE
-            soundWaves.amp(0.5);
+            //soundWaves.amp(0.5);
             soundWaves.play( myNotes[i], 0.1, delay+=noteDuration, noteDuration);
         }//close if selected position squares
         else {
-           soundWaves.amp(0);
+           //soundWaves.amp(0);
         }//close else not slectedSquare
         //COLOR SELECTED SQUARE
         if ( j == xPos && i == yPos ){
