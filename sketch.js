@@ -119,12 +119,12 @@ function setup() {
    soundWaves.setADSR(0.5, 0.5, 0.5, 0.5);
    //INITIALIZE ALL SQUARES TO FLASE, NOT SELECTED
     for (i = 0 ; i < gridSizeY ; i++) {
-       tones[i] =new p5.PolySynth();
-       tones[i].amp(0.5);
-       tones[i].freq(myNotes[i]);
-       envs[i] = new P5.Env();
-       envs[i].setADSR(0.001, 0.25, 0.1, 0.25);
-       envs[i].envelope.setRange(1, 0);
+//        tones[i] =new p5.PolySynth();
+//        tones[i].amp(0.5);
+//        tones[i].freq(myNotes[i]);
+//        envs[i] = new P5.Env();
+//        envs[i].setADSR(0.001, 0.25, 0.1, 0.25);
+//        envs[i].envelope.setRange(1, 0);
         //INITIALIZE ALL SQUARES TO FLASE, NOT SELECTED
         selectedSquares[i] = new Array(); 
         for (j = 0 ; j < gridSizeX ; j++) {
@@ -187,6 +187,7 @@ function draw() {
             //PLAY SOUNDS BASED ON SELECTED SQUARE    i --> NOTE
             //soundWaves.amp(0.5);
             //soundWaves.play( myNotes[i], 0.1, delay+=noteDuration, noteDuration);
+           
         }//close if selected position squares
 //         else {
 //            //soundWaves.amp(0);
