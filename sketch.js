@@ -13,7 +13,6 @@ TEMPO CHANGER
 //SET SKETCH HEIGHT AND WIDTH
 var pWidth = window.innerWidth - 15;
 var pHeight = window.innerHeight - 15;
-
 //GLOBAL VARIABLES
 var frameCounter = 0;
 var i = 0;
@@ -115,8 +114,8 @@ function setup() {
    background( 95, 95, 95);
    frameRate(60);
    //CREATE AND SETUP POLYSYNTH
-   soundWaves = new p5.PolySynth();
-   soundWaves.setADSR(0.5, 0.5, 0.5, 0.5);
+//    soundWaves = new p5.PolySynth();
+//    soundWaves.setADSR(0.5, 0.5, 0.5, 0.5);
    //INITIALIZE ALL SQUARES TO FLASE, NOT SELECTED
     for (i = 0 ; i < gridSizeY ; i++) {
 //        tones[i] = new p5.PolySynth();
