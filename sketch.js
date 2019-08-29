@@ -60,40 +60,40 @@ var myNotes = [
    150, 180, 187.5, 200, 225, 250, 300,
    300, 360, 375, 400, 450, 500, 600,
    450, 720, 750, 800, 900, 1000, 1200,
-   600, 1440, 1500, 1600, 1800, 2000, 2400.
+   600, 1440, 1500, 1600, 1800, 2000, 2400
    1200, 1880, 3000, 3200, 3600, 4000, 4800 ];
 
   
-// //SCALES 
-// var majorScales = [42];     //6 OCTAVES * 7 NOTES = 42
-// note = 0;
-// //FOR EACH OCTAVE
-// for ( i = 0 ; i < 7 ; i++){
-//   //FOR EACH NOTE OF THE OCTAVE/SCALE
-//    for ( j = 0 ; j < 12 ; j++){
-//       //ROOT NOTE IS 0
-//       majorScales.push(notes[(j+(i*12))]);
-//       //j INCREMENTS BY 1 TWICE, ALL OTHER TIMES BY 2
-//       if (j != 2 && j != 6) {
-//          j++;
-//       }//close if not the 4th, nor 8th note
-//    }//close for j each note in the scale
-// }//close for i each octave
+//SCALES 
+var majorScales = [42];     //6 OCTAVES * 7 NOTES = 42
+note = 0;
+//FOR EACH OCTAVE
+for ( i = 0 ; i < 7 ; i++){
+  //FOR EACH NOTE OF THE OCTAVE/SCALE
+   for ( j = 0 ; j < 12 ; j++){
+      //ROOT NOTE IS 0
+      majorScales.push(notes[(j+(i*12))]);
+      //j INCREMENTS BY 1 TWICE, ALL OTHER TIMES BY 2
+      if (j != 2 && j != 6) {
+         j++;
+      }//close if not the 4th, nor 8th note
+   }//close for j each note in the scale
+}//close for i each octave
 
-// var minorScales = [42];     //6 OCTAVES
-// note = 0;
-// //FOR EACH OCTAVE
-// for ( i = 0 ; i < 7 ; i++){
-//   //FOR EACH NOTE OF THE OCTAVE/SCALE
-//    for ( j = 0 ; j < 12 ; j++){
-//       //ROOT NOTE IS 0
-//       minorScales.push(notes[(j+(i*12))]);
-//       //j INCREMENTS BY 1 TWICE, ALL OTHER TIMES BY 2
-//       if (j != 1 && j != 4) {
-//          j++;
-//       }//close if not the 4th, nor 8th note
-//    }//close for j each note in the scale
-// }//close for i each octave
+var minorScales = [42];     //6 OCTAVES
+note = 0;
+//FOR EACH OCTAVE
+for ( i = 0 ; i < 7 ; i++){
+  //FOR EACH NOTE OF THE OCTAVE/SCALE
+   for ( j = 0 ; j < 12 ; j++){
+      //ROOT NOTE IS 0
+      minorScales.push(notes[(j+(i*12))]);
+      //j INCREMENTS BY 1 TWICE, ALL OTHER TIMES BY 2
+      if (j != 1 && j != 4) {
+         j++;
+      }//close if not the 4th, nor 8th note
+   }//close for j each note in the scale
+}//close for i each octave
 
 //RESPOND TO ARROW KEY INPUT (ASCII 37-40)
 window.addEventListener('keydown', move );
