@@ -118,7 +118,7 @@ function setup() {
 //    soundWaves.setADSR(0.5, 0.5, 0.5, 0.5);
    //INITIALIZE ALL SQUARES TO FLASE, NOT SELECTED
     for (i = 0 ; i < gridSizeY ; i++) {
-       tones[i] = new p5.PolySynth();
+//        tones[i] = new p5.PolySynth();
 //        tones[i].amp(0.5);
 //        tones[i].freq(myNotes[i]);
        envs[i] = new P5.Env();
