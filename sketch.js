@@ -123,7 +123,7 @@ function setup() {
 //        tones[i].freq(myNotes[i]);
        envs[i] = new p5.Envelope();
        envs[i].setADSR(0.001, 0.25, 0.1, 0.25);
-       envs[i].envelope.setRange(1, 0);
+       envs[i].setRange(1, 0);
         //INITIALIZE ALL SQUARES TO FLASE, NOT SELECTED
         selectedSquares[i] = new Array(); 
         for (j = 0 ; j < gridSizeX ; j++) {
