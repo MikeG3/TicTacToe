@@ -42,6 +42,8 @@ var noteDuration = 2;
 var delay = 0;
 var startNote = 36;      //A4
 var note = startNote;
+var tones = [gridSizeY];
+var envs = [gridSizeY];
 
 //7 octaves    KEY = NOTE+(12*(OCTAVE-1))  //A:0 A#:1  B:2 C:3 C#:4  D:5 D#:6 E:7 F:8 F#:9 G:10  G#11        INDEX = NOTE+(12*(OCTAVE-1))
    //A0 - G#0     -->   A6 - G#6
@@ -60,7 +62,8 @@ var myNotes = [
    150, 180, 187.5, 200, 225, 250, 300,
    300, 360, 375, 400, 450, 500, 600,
    450, 720, 750, 800, 900, 1000, 1200,
-   600, 1440, 1500, 1600, 1800, 2000, 2400 ];
+   600, 1440, 1500, 1600, 1800, 2000, 2400.
+   1200, 1880, 3000, 3200, 3600, 4000, 4800 ];
 
   
 //SCALES 
@@ -117,16 +120,19 @@ function setup() {
    soundWaves.setADSR(0.5, 0.5, 0.5, 0.5);
    //INITIALIZE ALL SQUARES TO FLASE, NOT SELECTED
     for (i = 0 ; i < gridSizeY ; i++) {
+       tones[i] =new p5.PolySynth();
+       tones[i].amp(0..5);
+       tones[i].freq(myNotes[i]);
+       envs[i] = new P5.Env();
+       envs[i].setADSR(0.001, 0.25, 0.1, 0.25);
+       envs[i].envelope.setRange(1, 0);
         //INITIALIZE ALL SQUARES TO FLASE, NOT SELECTED
         selectedSquares[i] = new Array(); 
         for (j = 0 ; j < gridSizeX ; j++) {
              selectedSquares[i].push(false);
          }//close for j
     }//close for i
-    //CONSTRUCT ENVELOPES FOR TONE DURATION
-    hole = new p5.Env();
-    hole.setADSR(0.5, 0.5, 0.5, 0.5)
-    hole.setRange(1, 0);
+   
     //TEST SOUND
    delay = 0;
    /*
