@@ -120,7 +120,7 @@ function setup() {
     for (i = 0 ; i < gridSizeY ; i++) {
        tones[i] = new p5.PolySynth();
 //        tones[i].amp(0.5);
-       tones[i].freq(myNotes[i]);
+//        tones[i].freq(myNotes[i]);
        envs[i] = new p5.Envelope();
        envs[i].setADSR(0.001, 0.25, 0.1, 0.25);
        envs[i].setRange(1, 0);
