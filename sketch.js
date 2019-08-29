@@ -80,20 +80,20 @@ for ( i = 0 ; i < 7 ; i++){
    }//close for j each note in the scale
 }//close for i each octave
 
-var minorScales = [42];     //6 OCTAVES
-note = 0;
-//FOR EACH OCTAVE
-for ( i = 0 ; i < 7 ; i++){
-  //FOR EACH NOTE OF THE OCTAVE/SCALE
-   for ( j = 0 ; j < 12 ; j++){
-      //ROOT NOTE IS 0
-      minorScales.push(notes[(j+(i*12))]);
-      //j INCREMENTS BY 1 TWICE, ALL OTHER TIMES BY 2
-      if (j != 1 && j != 4) {
-         j++;
-      }//close if not the 4th, nor 8th note
-   }//close for j each note in the scale
-}//close for i each octave
+// var minorScales = [42];     //6 OCTAVES
+// note = 0;
+// //FOR EACH OCTAVE
+// for ( i = 0 ; i < 7 ; i++){
+//   //FOR EACH NOTE OF THE OCTAVE/SCALE
+//    for ( j = 0 ; j < 12 ; j++){
+//       //ROOT NOTE IS 0
+//       minorScales.push(notes[(j+(i*12))]);
+//       //j INCREMENTS BY 1 TWICE, ALL OTHER TIMES BY 2
+//       if (j != 1 && j != 4) {
+//          j++;
+//       }//close if not the 4th, nor 8th note
+//    }//close for j each note in the scale
+// }//close for i each octave
 
 //RESPOND TO ARROW KEY INPUT (ASCII 37-40)
 window.addEventListener('keydown', move );
