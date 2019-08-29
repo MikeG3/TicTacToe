@@ -121,7 +121,7 @@ function setup() {
        tones[i] = new p5.PolySynth();
 //        tones[i].amp(0.5);
 //        tones[i].freq(myNotes[i]);
-//        envs[i] = new P5.Env();
+       envs[i] = new P5.Env();
 //        envs[i].setADSR(0.001, 0.25, 0.1, 0.25);
 //        envs[i].envelope.setRange(1, 0);
         //INITIALIZE ALL SQUARES TO FLASE, NOT SELECTED
