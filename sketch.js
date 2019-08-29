@@ -47,54 +47,54 @@ var envs = [gridSizeY];
 //7 octaves    KEY = NOTE+(12*(OCTAVE-1))  //A:0 A#:1  B:2 C:3 C#:4  D:5 D#:6 E:7 F:8 F#:9 G:10  G#11        INDEX = NOTE+(12*(OCTAVE-1))
    //A0 - G#0     -->   A6 - G#6
 
-var notes = [                     
-  55, 58.27, 61.74, 65.41, 69.3, 73.42, 77.78, 82.41, 87.31, 92.5, 98, 103.83,                         
-  110, 116.54, 123.47, 130.81, 138.59, 146.83, 155.56, 164.81, 174.61, 185, 196, 207.65, 
-  220, 233.08, 246.94, 261.63, 277.18, 293.66, 311.13, 329.63, 349.23, 369.99, 392, 415.3,
-  440, 466.16, 493.88, 523.25, 554.37, 587.33, 622.25, 659.25, 698.46, 739.99, 783.99, 830.61,
-  880, 932.33, 987.77, 1046.5, 1108.73, 1174.66, 1244.51, 1318.51, 1396.91, 1479.98, 1567.98, 1661.22,
-  1760, 1864.66, 1975.53, 2093, 2217.46, 2349.32, 2489.02, 2637.02, 2793.83, 2959.96, 3135.96, 3322.44, 
-  3520, 3729.31, 3951.07, 4186.01, 4434.92, 4698.63, 4978.03, 5274.04, 5587.65, 5919.91, 6271.93, 6644.88,   
-  7040, 7458.62, 7902.13 ];
+// var notes = [                     
+//   55, 58.27, 61.74, 65.41, 69.3, 73.42, 77.78, 82.41, 87.31, 92.5, 98, 103.83,                         
+//   110, 116.54, 123.47, 130.81, 138.59, 146.83, 155.56, 164.81, 174.61, 185, 196, 207.65, 
+//   220, 233.08, 246.94, 261.63, 277.18, 293.66, 311.13, 329.63, 349.23, 369.99, 392, 415.3,
+//   440, 466.16, 493.88, 523.25, 554.37, 587.33, 622.25, 659.25, 698.46, 739.99, 783.99, 830.61,
+//   880, 932.33, 987.77, 1046.5, 1108.73, 1174.66, 1244.51, 1318.51, 1396.91, 1479.98, 1567.98, 1661.22,
+//   1760, 1864.66, 1975.53, 2093, 2217.46, 2349.32, 2489.02, 2637.02, 2793.83, 2959.96, 3135.96, 3322.44, 
+//   3520, 3729.31, 3951.07, 4186.01, 4434.92, 4698.63, 4978.03, 5274.04, 5587.65, 5919.91, 6271.93, 6644.88,   
+//   7040, 7458.62, 7902.13 ];
 
-var myNotes = [
-   150, 180, 187.5, 200, 225, 250, 300,
-   300, 360, 375, 400, 450, 500, 600,
-   450, 720, 750, 800, 900, 1000, 1200,
-   600, 1440, 1500, 1600, 1800, 2000, 2400.
-   1200, 1880, 3000, 3200, 3600, 4000, 4800 ];
+// var myNotes = [
+//    150, 180, 187.5, 200, 225, 250, 300,
+//    300, 360, 375, 400, 450, 500, 600,
+//    450, 720, 750, 800, 900, 1000, 1200,
+//    600, 1440, 1500, 1600, 1800, 2000, 2400.
+//    1200, 1880, 3000, 3200, 3600, 4000, 4800 ];
 
   
-//SCALES 
-var majorScales = [42];     //6 OCTAVES * 7 NOTES = 42
-note = 0;
-//FOR EACH OCTAVE
-for ( i = 0 ; i < 7 ; i++){
-  //FOR EACH NOTE OF THE OCTAVE/SCALE
-   for ( j = 0 ; j < 12 ; j++){
-      //ROOT NOTE IS 0
-      majorScales.push(notes[(j+(i*12))]);
-      //j INCREMENTS BY 1 TWICE, ALL OTHER TIMES BY 2
-      if (j != 2 && j != 6) {
-         j++;
-      }//close if not the 4th, nor 8th note
-   }//close for j each note in the scale
-}//close for i each octave
+// //SCALES 
+// var majorScales = [42];     //6 OCTAVES * 7 NOTES = 42
+// note = 0;
+// //FOR EACH OCTAVE
+// for ( i = 0 ; i < 7 ; i++){
+//   //FOR EACH NOTE OF THE OCTAVE/SCALE
+//    for ( j = 0 ; j < 12 ; j++){
+//       //ROOT NOTE IS 0
+//       majorScales.push(notes[(j+(i*12))]);
+//       //j INCREMENTS BY 1 TWICE, ALL OTHER TIMES BY 2
+//       if (j != 2 && j != 6) {
+//          j++;
+//       }//close if not the 4th, nor 8th note
+//    }//close for j each note in the scale
+// }//close for i each octave
 
-var minorScales = [42];     //6 OCTAVES
-note = 0;
-//FOR EACH OCTAVE
-for ( i = 0 ; i < 7 ; i++){
-  //FOR EACH NOTE OF THE OCTAVE/SCALE
-   for ( j = 0 ; j < 12 ; j++){
-      //ROOT NOTE IS 0
-      minorScales.push(notes[(j+(i*12))]);
-      //j INCREMENTS BY 1 TWICE, ALL OTHER TIMES BY 2
-      if (j != 1 && j != 4) {
-         j++;
-      }//close if not the 4th, nor 8th note
-   }//close for j each note in the scale
-}//close for i each octave
+// var minorScales = [42];     //6 OCTAVES
+// note = 0;
+// //FOR EACH OCTAVE
+// for ( i = 0 ; i < 7 ; i++){
+//   //FOR EACH NOTE OF THE OCTAVE/SCALE
+//    for ( j = 0 ; j < 12 ; j++){
+//       //ROOT NOTE IS 0
+//       minorScales.push(notes[(j+(i*12))]);
+//       //j INCREMENTS BY 1 TWICE, ALL OTHER TIMES BY 2
+//       if (j != 1 && j != 4) {
+//          j++;
+//       }//close if not the 4th, nor 8th note
+//    }//close for j each note in the scale
+// }//close for i each octave
 
 //RESPOND TO ARROW KEY INPUT (ASCII 37-40)
 window.addEventListener('keydown', move );
