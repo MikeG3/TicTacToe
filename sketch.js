@@ -36,7 +36,6 @@ var grayColor = 0;
 var incrementing = true;
 var soundWaves;
 var selectedSquares = [gridSizeY];
-var hole, half, quarter, eigth;
 var tempo = 50;           //integer value used for counter to start/stop oscillator
 var noteDuration = 2;
 var delay = 0;
@@ -187,7 +186,7 @@ function draw() {
             fill(25, 255, 75);
             //PLAY SOUNDS BASED ON SELECTED SQUARE    i --> NOTE
             //soundWaves.amp(0.5);
-            soundWaves.play( myNotes[i], 0.1, delay+=noteDuration, noteDuration);
+            //soundWaves.play( myNotes[i], 0.1, delay+=noteDuration, noteDuration);
         }//close if selected position squares
         else {
            //soundWaves.amp(0);
@@ -202,23 +201,9 @@ function draw() {
         //DRAW EACH RECTANGLE IN THE LOOPS
          rect(j*squareSize , i*squareSize , squareSize, squareSize); 
           
-        }//close inner for loop
-        
+        }//close inner for loop        
     }//close outter for loop
 
-    //PLAY SOUND
-    /*
-     for (i = 0 ; i < gridSizeX ; i++ ){
-      for (j = 0 ; j < gridSizeY  ; j++) { 
-          if ( selectedSquares[j][i] ){
-            soundWaves.play("G1", 0.1, 0, noteDuration);
-            soundWaves.play("G2", 0.1, 1, noteDuration);
-            soundWaves.play("G3", 0.1, 2, noteDuration);
-            soundWaves.play("G4", 0.1, 3, noteDuration);
-        }//close if selected position square
-      }//close for j each note pitch vertically
-     }//close for i note duration horizontaly 
-     */
     
     //UPDATE FRAME COUNT
     frameCounter++;
