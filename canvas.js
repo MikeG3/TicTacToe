@@ -70,7 +70,7 @@ for (i = 0 ; i < windowHeight ; i+=squareSize ){
       j += squareSize;
     }//close if
     //update colors
-    aSquareR += 5;
+    //aSquareR += 5;
     aSquareR %= 255;
     aSquareG += 25;
     aSquareG %= 255;
@@ -81,7 +81,7 @@ for (i = 0 ; i < windowHeight ; i+=squareSize ){
   }//close inner for loop
   
   //update colors
-  aSquareR += 5;
+  //aSquareR += 5;
   aSquareR %= 255;
   aSquareG += 25;
   aSquareG %= 255;
