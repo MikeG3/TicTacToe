@@ -47,7 +47,8 @@ function drawGrid(){
   //DEBUG
   //
   c.font = "50px Arial";
-  c.fillText(frameCounter, 0, 0);
+  c.fillStyle = "#000000";
+  c.fillText(frameCounter, x/2, x/2);
 
   //GRID
   c.rect( x, x, x*3, 1 );
