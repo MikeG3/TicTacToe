@@ -114,7 +114,7 @@ function playTicTacToe() {
 //document.write("Window height = " + windowHeight + "<br>");
 
 frameCounter++;
-requestAnimationFrame(animate);
+//requestAnimationFrame(animate);
 //output to console
 console.log(canvas);
 playTicTacToe();
