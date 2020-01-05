@@ -46,9 +46,9 @@ function drawGrid(){
   //
   //DEBUG
   //
-  c.font = "50px Arial";
-  c.fillStyle = "#000000";
-  c.fillText(frameCounter, x/2, x/2);
+  // c.font = "50px Arial";
+  // c.fillStyle = "#000000";
+  // c.fillText(frameCounter, x/2, x/2);
 
   //GRID
   c.rect( x, x, x*3, 1 );
@@ -56,6 +56,16 @@ function drawGrid(){
   c.rect( x*2, 0, 1, x*3 );
   c.rect( x*3, 0, 1, x*3);
   //SELECTED SQUARE
+  c.fillStyle = "#307ad9";
+  c.fillRect(x1, y1, x, y);
+  c.fillRect(x2, y1, x, y);
+  c.fillRect(x3, y1, x, y);
+  c.fillRect(x1, y2, x, y);
+  c.fillRect(x2, y2, x, y);
+  c.fillRect(x3, y2, x, y);
+  c.fillRect(x1, y3, x, y);
+  c.fillRect(x2, y3, x, y);
+  c.fillRect(x3, y3, x, y);
   c.fillStyle = "#504ed1";
   if (xPos == 0 && yPos == 0){ c.fillRect(x1, y1, x, y);}
   else if (xPos == 1 && yPos == 0){ c.fillRect(x2, y1, x, y);}
@@ -99,7 +109,7 @@ function drawGrid(){
   c.stroke();
 }//close function draw grid
 
-function playTicTacToe() {
+function animate() {
 
   //variables
 
@@ -108,16 +118,15 @@ function playTicTacToe() {
   //DRAW GRID
   drawGrid();
 
-  document.write("HELLO WORLD");
-
+//document.write("HELLO WORLD");
 //document.write("Window width = " + windowWidth + "<br>");
 //document.write("Window height = " + windowHeight + "<br>");
 
 frameCounter++;
-//requestAnimationFrame(playTicTacToe);
+requestAnimationFrame(animate);
 //output to console
 console.log(canvas);
-playTicTacToe();
+//animate();
 }//close function play tic tac toe
 
-playTicTacToe();
+animate();
