@@ -26,7 +26,7 @@ var x3 = x*3;
 var y1 = 1;
 var y2 = x;
 var y3 = x*2;
-var grid = [ 1, 1, 1, 1, 1, 1, 1, 1, 1 ];
+var grid = [ 0, -1, 1, -1, 0, -1, 1, 1, 0 ];
 var playerTurn = false;
 var xPos = 0;
 var yPos = 0;
@@ -34,6 +34,9 @@ var yPos = 0;
 c.fillStyle = "#FF00EE";
 
 function move(key) {
+    //RESTART GAME
+    if (key.keyCode == 81 || key.keyCode == 27 ) { restart(); }
+    //MOVE
     if (key.keyCode == 37) {xPos = (xPos-1); if (xPos < 0) { xPos = 2; } }
     if (key.keyCode == 39) {xPos = (xPos+1); if (xPos > 2) { xPos = 0; } }
     if (key.keyCode == 38) {yPos = (yPos-1); if (yPos < 0) { yPos = 2; } }
@@ -42,21 +45,26 @@ function move(key) {
     if (key.keyCode == 13) { selectedSquares[yPos][xPos] = !selectedSquares[yPos][xPos]; }
 }//close move function
 
+function restart(){
+  for (i = 0 ; i < grid.length ; i++ ){
+    grid[i] = -1;
+  }//close for i
+}//close function restart
+
 function drawGrid(){
-  //
-  //DEBUG
-  //
+  //restart();
+  // c.fillStyle = "#3388f4";
+  // c.fillRect(0, 0, x, x);
   // c.font = "50px Arial";
   // c.fillStyle = "#000000";
-  // c.fillText(frameCounter, x/2, x/2);
-
+  // c.fillText("ABC", 10, 100);
   //GRID
   c.rect( x, x, x*3, 1 );
   c.rect( x, x*2, x*3, 1 );
   c.rect( x*2, 0, 1, x*3 );
   c.rect( x*3, 0, 1, x*3);
-  //SELECTED SQUARE
   c.fillStyle = "#307ad9";
+  //FILL SQUARES
   c.fillRect(x1, y1, x, y);
   c.fillRect(x2, y1, x, y);
   c.fillRect(x3, y1, x, y);
@@ -66,6 +74,7 @@ function drawGrid(){
   c.fillRect(x1, y3, x, y);
   c.fillRect(x2, y3, x, y);
   c.fillRect(x3, y3, x, y);
+  //SELECTED SQUARE
   c.fillStyle = "#504ed1";
   if (xPos == 0 && yPos == 0){ c.fillRect(x1, y1, x, y);}
   else if (xPos == 1 && yPos == 0){ c.fillRect(x2, y1, x, y);}
@@ -106,6 +115,14 @@ function drawGrid(){
   //c.fillText(grid[8], x3, y3);
   if (grid[8] == 0){ c.fillText("X", x3+x/2.5, y3+x/1.5); }//close if
   else if (grid[8] == 1){ c.fillText("Y", x3+x/2.5, y3+x/1.5); }//close if
+
+  // if (frameCounter % 2 == 0 && frameCounter < 100){
+  //   c.fillStyle = "#3388f4";
+  //   c.fillRect(0, 0, x, x);
+  //   c.font = "50px Arial";
+  //   c.fillStyle = "#000000";
+  //   c.fillText("ZXY", 10, 100);
+  // }
   c.stroke();
 }//close function draw grid
 
