@@ -66,61 +66,28 @@ function drawGrid(){
   else if (grid[0] == 1){ c.fillText("Y", x1, y1); }//close if
   //c.fillText(grid[1], x2, y1);
   if (grid[1] == 0){ c.fillText("X", x2, y1); }//close if
-  else if (grid[1] == 1){
-    c.fillText("Y", x2, y1);
-  }//close if
+  else if (grid[1] == 1){ c.fillText("Y", x2, y1); }//close if
   //c.fillText(grid[2], x3, y1);
-  if (grid[2] == 0){
-    c.fillText("X", x3, y1);
-  }//close if
-  else if (grid[2] == 1){
-    c.fillText("Y", x3, y1);
-  }//close if
+  if (grid[2] == 0){ c.fillText("X", x3, y1); }//close if
+  else if (grid[2] == 1){ c.fillText("Y", x3, y1); }//close if
   //c.fillText(grid[3], x1, y2);
-  if (grid[3] == 0){
-    c.fillText("X", x1, y2);
-  }//close if
-  else if (grid[3] == 1){
-    c.fillText("Y", x1, y2);
-  }//close if
+  if (grid[3] == 0){ c.fillText("X", x1, y2); }//close if
+  else if (grid[3] == 1){ c.fillText("Y", x1, y2); }//close if
   //c.fillText(grid[4], x2, y2);
-  if (grid[4] == 0){
-    c.fillText("X", x2, y2);
-  }//close if
-  else if (grid[4] == 1){
-    c.fillText("Y", x2, y2);
-  }//close if
+  if (grid[4] == 0){ c.fillText("X", x2, y2); }//close if
+  else if (grid[4] == 1){ c.fillText("Y", x2, y2); }//close if
   //c.fillText(grid[5], x3, y2);
-  if (grid[5] == 0){
-    c.fillText("X", x3, y2);
-  }//close if
-  else if (grid[5] == 1){
-    c.fillText("Y", x3, y2);
-  }//close if
+  if (grid[5] == 0){ c.fillText("X", x3, y2); }//close if
+  else if (grid[5] == 1){ c.fillText("Y", x3, y2); }//close if
   //c.fillText(grid[6], x1, y3);
-  if (grid[6] == 0){
-    c.fillText("X", x1, y3);
-  }//close if
-  else if (grid[6] == 1){
-    c.fillText("Y", x1, y3);
-  }//close if
+  if (grid[6] == 0){ c.fillText("X", x1, y3); }//close if
+  else if (grid[6] == 1){ c.fillText("Y", x1, y3); }//close if
   //c.fillText(grid[7], x2, y3);
-  if (grid[7] == 0){
-    c.fillText("X", x2, y3);
-  }//close if
-  else if (grid[7] == 1){
-    c.fillText("Y", x2, y3);
-  }//close if
+  if (grid[7] == 0){ c.fillText("X", x2, y3); }//close if
+  else if (grid[7] == 1){ c.fillText("Y", x2, y3); }//close if
   //c.fillText(grid[8], x3, y3);
-  if (grid[8] == 0){
-    c.fillText("X", x3, y3);
-  }//close if
-  else if (grid[8] == 1){
-    c.fillText("Y", x3, y3);
-  }//close if
-
-
-
+  if (grid[8] == 0){ c.fillText("X", x3, y3); }//close if
+  else if (grid[8] == 1){ c.fillText("Y", x3, y3); }//close if
   c.stroke();
 }//close function draw grid
 
@@ -142,6 +109,7 @@ frameCounter++;
 requestAnimationFrame(animate);
 //output to console
 console.log(canvas);
+playTicTacToe();
 }//close function play tic tac toe
 
 playTicTacToe();
