@@ -2,8 +2,8 @@
 var canvas = document.querySelector('canvas');
 
 //set canvas height and width
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight*1.25;
+canvas.width = window.innerWidth*0.95;
+canvas.height = window.innerHeight*1.1;
 var windowWidth = window.innerWidth;
 var windowHeight = window.innerHeight;
 //RESPOND TO ARROW KEY INPUT (ASCII 37-40 for arrows)
