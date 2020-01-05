@@ -46,6 +46,7 @@ function drawGrid(){
   //
   //DEBUG
   //
+  c.font = "50px Arial";
   c.fillText(frameCounter, 0, 0);
 
   //GRID
