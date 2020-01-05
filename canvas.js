@@ -43,6 +43,11 @@ function move(key) {
 }//close move function
 
 function drawGrid(){
+  //
+  //DEBUG
+  //
+  c.fillText(frameCounter, 0, 0);
+
   //GRID
   c.rect( x, x, x*3, 1 );
   c.rect( x, x*2, x*3, 1 );
