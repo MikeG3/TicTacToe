@@ -37,7 +37,7 @@ function move(key) {
     if (key.keyCode == 37) {xPos = (xPos-1); if (xPos < 0) { xPos = 2; } }
     if (key.keyCode == 39) {xPos = (xPos+1); if (xPos > 2) { xPos = 0; } }
     if (key.keyCode == 38) {yPos = (yPos-1); if (yPos < 0) { yPos = 2; } }
-    if (key.keyCode == 40) {yPos = (yPos+1); if (yPos == gridSizeY) { yPos = 0; } }
+    if (key.keyCode == 40) {yPos = (yPos+1); if (yPos > 2) { yPos = 0; } }
     //TOGGLE SELECTED SQUARE
     if (key.keyCode == 13) { selectedSquares[yPos][xPos] = !selectedSquares[yPos][xPos]; }
 }//close move function
