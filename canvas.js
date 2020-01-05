@@ -7,7 +7,7 @@ canvas.height = window.innerHeight;
 var windowWidth = window.innerWidth;
 var windowHeight = window.innerHeight;
 //RESPOND TO ARROW KEY INPUT (ASCII 37-40 for arrows)
-//window.addEventListener('keydown', move );
+window.addEventListener('keydown', move );
 canvas.addEventListener('keydown', move );
 
 //Gives canvas API 2d drawing functions
@@ -18,14 +18,14 @@ var frameCounter = 0;
 var i = 0;
 var j = 0;
 var k = 0;
-var x = windowWidth;
-var y = windowHeight;
-var x1 = x*3/16;
-var x2 = x*5.5/12;
-var x3 = x*12/16;
-var y1 = y*2.2/8;
-var y2 = y*8/16;
-var y3 = y*11.5/16;
+var x = windowWidth/5;
+var y = x;
+var x1 = x;
+var x2 = x*2;
+var x3 = x*3;
+var y1 = 1;
+var y2 = x;
+var y3 = x*2;
 var grid = [ -1, -1, -1, -1, -1, -1, -1, -1, -1 ];
 var playerTurn = false;
 var xPos = 0;
@@ -44,21 +44,21 @@ function move(key) {
 
 function drawGrid(){
   //GRID
-  c.rect( x/8, y*3/8, x*3/4, 1 );
-  c.rect( x/8, y*9/16, x*3/4, 1 );
-  c.rect( y/3, y/8, 1, x*3/4 );
-  c.rect( x*5/8, y/8, 1, x*3/4);
+  c.rect( x, x, x*3, 1 );
+  c.rect( x, x*2, x*3, 1 );
+  c.rect( x*2, 0, 1, x*3 );
+  c.rect( x*3, 0, 1, x*3);
   //SELECTED SQUARE
   c.fillStyle = "#504ed1";
-  if (xPos == 0 && yPos == 0){ c.fillRect(x*2/16, y/8, x*3/12, y*2/8);}
-  else if (xPos == 1 && yPos == 0){ c.fillRect(x*4/16, y/8, x*3/12, y*2/8);}
-  else if (xPos == 2 && yPos == 0){ c.fillRect(x*4/16, y/8, x*3/12, y*2/8);}
-  else if (xPos == 0 && yPos == 1){ c.fillRect(x*4/16, y/8, x*3/12, y*2/8);}
-  else if (xPos == 1 && yPos == 1){ c.fillRect(x*4/16, y/8, x*3/12, y*2/8);}
-  else if (xPos == 2 && yPos == 1){ c.fillRect(x*4/16, y/8, x*3/12, y*2/8);}
-  else if (xPos == 0 && yPos == 2){ c.fillRect(x*4/16, y/8, x*3/12, y*2/8);}
-  else if (xPos == 1 && yPos == 2){ c.fillRect(x*4/16, y/8, x*3/12, y*2/8);}
-  else if (xPos == 2 && yPos == 2){ c.fillRect(x*4/16, y/8, x*3/12, y*2/8);}
+  if (xPos == 0 && yPos == 0){ c.fillRect(x1, y1, x, y);}
+  else if (xPos == 1 && yPos == 0){ c.fillRect(x2, y1, x, y);}
+  else if (xPos == 2 && yPos == 0){ c.fillRect(x3, y1, x, y);}
+  else if (xPos == 0 && yPos == 1){ c.fillRect(x1, y2, x, y);}
+  else if (xPos == 1 && yPos == 1){ c.fillRect(x2, y2, x, y);}
+  else if (xPos == 2 && yPos == 1){ c.fillRect(x3, y2, x, y);}
+  else if (xPos == 0 && yPos == 2){ c.fillRect(x1, y3, x, y);}
+  else if (xPos == 1 && yPos == 2){ c.fillRect(x2, y3, x, y);}
+  else if (xPos == 2 && yPos == 2){ c.fillRect(x3, y3, x, y);}
 
   c.font = "30px Arial";
   //c.fillText(grid[0], x1, y1);
