@@ -15,6 +15,11 @@ var c = canvas.getContext('2d');
 
 //variables
 var frameCounter = 0;
+var turn = 0;
+var gameOver = false;
+var cpuWin = false;
+var playerWin = false;
+var playerTurn = false;
 var i = 0;
 var j = 0;
 var k = 0;
@@ -26,8 +31,7 @@ var x3 = x*3;
 var y1 = 1;
 var y2 = x;
 var y3 = x*2;
-var grid = [ 0, -1, 1, -1, 0, -1, 1, 1, 0 ];
-var playerTurn = false;
+var grid = [ -1, -1, -1, -1, -1, -1, -1, -1, -1 ];
 var xPos = 0;
 var yPos = 0;
 
@@ -42,22 +46,27 @@ function move(key) {
     if (key.keyCode == 38) {yPos = (yPos-1); if (yPos < 0) { yPos = 2; } }
     if (key.keyCode == 40) {yPos = (yPos+1); if (yPos > 2) { yPos = 0; } }
     //TOGGLE SELECTED SQUARE
-    if (key.keyCode == 13) { selectedSquares[yPos][xPos] = !selectedSquares[yPos][xPos]; }
+    if (key.keyCode == 13) {
+      if (playerTurn){
+        placeX();
+        playerTurn = false;
+        cpuTurn = true;
+      }//close  if its the players turn
+    }//close if keycode selected
 }//close move function
 
 function restart(){
+  gameOver = false;
+  turn = 0;
+  cpuWin = false;
+  playerWin = false;
   for (i = 0 ; i < grid.length ; i++ ){
     grid[i] = -1;
   }//close for i
+  drawGrid();
 }//close function restart
 
 function drawGrid(){
-  //restart();
-  // c.fillStyle = "#3388f4";
-  // c.fillRect(0, 0, x, x);
-  // c.font = "50px Arial";
-  // c.fillStyle = "#000000";
-  // c.fillText("ABC", 10, 100);
   //GRID
   c.rect( x, x, x*3, 1 );
   c.rect( x, x*2, x*3, 1 );
@@ -88,62 +97,119 @@ function drawGrid(){
 
   c.font = "50px Arial";
   c.fillStyle = "#000000";
-  //c.fillText(grid[0], x1, y1);
   if (grid[0] == 0){  c.fillText("X", x1+x/2.5, y1+x/1.5); }//close if
   else if (grid[0] == 1){ c.fillText("Y", x1+x/2.5, y1+x/1.5); }//close if
-  //c.fillText(grid[1], x2, y1);
   if (grid[1] == 0){ c.fillText("X", x2+x/2.5, y1+x/1.5); }//close if
   else if (grid[1] == 1){ c.fillText("Y", x2+x/2.5, y1+x/1.5); }//close if
-  //c.fillText(grid[2], x3, y1);
   if (grid[2] == 0){ c.fillText("X", x3+x/2.5, y1+x/1.5); }//close if
   else if (grid[2] == 1){ c.fillText("Y", x3+x/2.5, y1+x/1.5); }//close if
-  //c.fillText(grid[3], x1, y2);
   if (grid[3] == 0){ c.fillText("X", x1+x/2.5, y2+x/1.5); }//close if
   else if (grid[3] == 1){ c.fillText("Y", x1+x/2.5, y2+x/1.5); }//close if
-  //c.fillText(grid[4], x2, y2);
   if (grid[4] == 0){ c.fillText("X", x2+x/2.5, y2+x/1.5); }//close if
   else if (grid[4] == 1){ c.fillText("Y", x2+x/2.5, y2+x/1.5); }//close if
-  //c.fillText(grid[5], x3, y2);
   if (grid[5] == 0){ c.fillText("X", x3+x/2.5, y2+x/1.5); }//close if
   else if (grid[5] == 1){ c.fillText("Y", x3+x/2.5, y2+x/1.5); }//close if
-  //c.fillText(grid[6], x1, y3);
   if (grid[6] == 0){ c.fillText("X", x1+x/2.5, y3+x/1.5); }//close if
   else if (grid[6] == 1){ c.fillText("Y", x1+x/2.5, y3+x/1.5); }//close if
-  //c.fillText(grid[7], x2, y3);
   if (grid[7] == 0){ c.fillText("X", x2+x/2.5, y3+x/1.5); }//close if
   else if (grid[7] == 1){ c.fillText("Y", x2+x/2.5, y3+x/1.5); }//close if
-  //c.fillText(grid[8], x3, y3);
   if (grid[8] == 0){ c.fillText("X", x3+x/2.5, y3+x/1.5); }//close if
   else if (grid[8] == 1){ c.fillText("Y", x3+x/2.5, y3+x/1.5); }//close if
 
-  // if (frameCounter % 2 == 0 && frameCounter < 100){
-  //   c.fillStyle = "#3388f4";
-  //   c.fillRect(0, 0, x, x);
-  //   c.font = "50px Arial";
-  //   c.fillStyle = "#000000";
-  //   c.fillText("ZXY", 10, 100);
-  // }
   c.stroke();
 }//close function draw grid
 
+function placeX(){
+  var gridValue = xPos + (yPos * 3);
+  if (grid[gridValue] == -1){
+    grid[gridValue] = 1;
+    playerTurn = false;
+    cpuTurn = true;
+  }//close if
+}//close function selectSquare
+
+function playersTurn(){
+  while (playerTurn){
+  //k++;
+//  break;
+    drawGrid();
+  }//close while player turn
+  cpuTurn = true;
+  playerTurn = false;
+}//close function player turn
+
+function cpuTurn(){
+  //EASY MODE
+  for ( i = 0 ; i < grid.length ; i++ ){
+    if (grid[i] == -1){
+      grid[i] = 0;
+      break;
+      //i=10;
+    }//close if available square
+  }//close for i
+  playerTurn = true;
+  cpuTurn = false;
+}//close function player turn
+
+//UPDATE WINNER
+function checkWinner(){
+if (  (grid[0]==0&&grid[1]==0&&grid[2]==0) ||
+      (grid[3]==0&&grid[4]==0&&grid[5]==0) ||
+      (grid[6]==0&&grid[7]==0&&grid[8]==0) ||
+      (grid[0]==0&&grid[3]==0&&grid[6]==0) ||
+      (grid[1]==0&&grid[4]==0&&grid[7]==0) ||
+      (grid[2]==0&&grid[5]==0&&grid[8]==0) ||
+      (grid[0]==0&&grid[4]==0&&grid[8]==0) ||
+      (grid[6]==0&&grid[4]==0&&grid[2]==0) ) {
+        cpuWin = true;
+        gameOver = true;
+      }//close if cpu wins
+
+      //UPDATE WINNER
+      if (  (grid[0]==1&&grid[1]==1&&grid[2]==1) ||
+            (grid[3]==1&&grid[4]==1&&grid[5]==1) ||
+            (grid[6]==1&&grid[7]==1&&grid[8]==1) ||
+            (grid[0]==1&&grid[3]==1&&grid[6]==1) ||
+            (grid[1]==1&&grid[4]==1&&grid[7]==1) ||
+            (grid[2]==1&&grid[5]==1&&grid[8]==1) ||
+            (grid[0]==1&&grid[4]==1&&grid[8]==1) ||
+            (grid[6]==1&&grid[4]==1&&grid[2]==1) ) {
+              playerWin = true;
+              gameOver = true;
+            }//close if cpu wins
+
+}//close function check winner
 function animate() {
-
-  //variables
-
+  drawGrid();
   //GAME LOOP
+  while (!gameOver){
+    //TURNS
+    turn++;
+    cpuTurn();
+    checkWinner();
+    if (!gameOver && turn < 10 ){
+      playersTurn();
+      checkWinner();
+    }//close uf game not over
 
-  //DRAW GRID
+    //DRAW GRID
+    drawGrid();
+
+    //UPDATE GAME OVER
+    if (turn == 10){
+      gameOver = true;
+      document.write("THE GAME IS OVER, PRESS ESC OR Q TO START AGAIN");
+    }//close if there are no turns left
+
+  }//close while game is not over
+
   drawGrid();
 
-//document.write("HELLO WORLD");
-//document.write("Window width = " + windowWidth + "<br>");
-//document.write("Window height = " + windowHeight + "<br>");
-
-frameCounter++;
-requestAnimationFrame(animate);
-//output to console
-console.log(canvas);
-//animate();
+  //animate
+  frameCounter++;
+  requestAnimationFrame(animate);
+  //output to console
+  console.log(canvas);
 }//close function play tic tac toe
 
 animate();
